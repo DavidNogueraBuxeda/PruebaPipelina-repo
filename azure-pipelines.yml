@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    subscriptionId: '0274df09-ce38-49d9-8696-600f544ab18e'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'azure-pipelines-test'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/DavidNogueraBuxeda/PruebaPipelina-repo/main/CreateWebApp/azuredeploy.json?token=AFMKY5P6MWZIVXS5USRWQWLBBWN5A'
+    overrideParameters: '-projectName PruebaPipelina'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
