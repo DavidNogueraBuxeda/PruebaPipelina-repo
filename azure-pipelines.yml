@@ -19,7 +19,7 @@ steps:
     resourceGroupName: 'azure-pipelines-test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/DavidNogueraBuxeda/PruebaPipelina-repo/main/CreateWebApp/azuredeploy.json?token=AFMKY5P6MWZIVXS5USRWQWLBBWN5A'
+    csmFileLink: 'https://raw.githubusercontent.com/DavidNogueraBuxeda/PruebaPipelina-repo/main/CreateWebApp/azuredeploy.json?token=AFMKY5LAVDKAWGU5YWIMQKDBBWRJ2'
     overrideParameters: '-projectName myarmpipeline'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
